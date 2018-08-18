@@ -12,7 +12,7 @@
 
 // ############################### GENERAL ###############################
 
-// How to calibrate: connect GND and RX of a 3.3v uart-usb adapter to the right sensor board cable (be careful not to use the red wire of the cable. 15v will destroye verything.). if you are using nunchuck, disable it temporarily. enable DEBUG_SERIAL_USART3 and DEBUG_SERIAL_ASCII use asearial terminal.
+// How to calibrate: connect GND and RX of a 3.3v uart-usb adapter to the right sensor board cable (be careful not to use the red wire of the cable. 15v will destroy everything.). if you are using nunchuck, disable it temporarily. enable DEBUG_SERIAL_USART3 and DEBUG_SERIAL_ASCII use a searial terminal.
 
 // Battery voltage calibration: connect power source. see <How to calibrate>. write value nr 5 to BAT_CALIB_ADC. make and flash firmware. then you can verify voltage on value 6 (devide it by 100.0 to get calibrated voltage).
 #define BAT_CALIB_REAL_VOLTAGE        43.0       // input voltage measured by multimeter  
@@ -89,7 +89,7 @@
 #define INVERT_L_DIRECTION
 #define BEEPS_BACKWARD 1    // 0 or 1
 
-//Turbo boost at high speeds while button1 is pressed:
+// Turbo boost at high speeds while button1 is pressed:
 //#define ADDITIONAL_CODE \
 if (button1 && speedR > 700) { /* field weakening at high speeds */ \
   weakl = cmd1 - 700; /* weak should never exceed 400 or 450 MAX!! */ \
