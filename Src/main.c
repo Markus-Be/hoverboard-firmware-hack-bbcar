@@ -171,10 +171,14 @@ int main(void) {
   #ifdef DEBUG_I2C_LCD
     I2C_Init();
     HAL_Delay(50);
-    lcd.pcf8574.PCF_I2C_ADDRESS = 0x27;
+//    lcd.pcf8574.PCF_I2C_ADDRESS = 0x27;
+    lcd.pcf8574.PCF_I2C_ADDRESS = 0x3F;
+// added Instance (see pcf8574.h
+      lcd.pcf8574.i2c.Instance = I2C1;
       lcd.pcf8574.PCF_I2C_TIMEOUT = 5;
       lcd.pcf8574.i2c = hi2c2;
       lcd.NUMBER_OF_LINES = NUMBER_OF_LINES_2;
+//      lcd.type = PCF8574;
       lcd.type = TYPE0;
 
       if(LCD_Init(&lcd)!=LCD_OK){

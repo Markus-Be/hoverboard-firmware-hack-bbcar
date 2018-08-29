@@ -42,6 +42,9 @@ Src/main.c \
 Src/bldc.c \
 Src/comms.c \
 Src/stm32f1xx_it.c \
+# Removed the files for LCD
+#Src/hd44780.c \
+#Src/pcf8574.c \
 
 # ASM sources
 ASM_SOURCES =  \
